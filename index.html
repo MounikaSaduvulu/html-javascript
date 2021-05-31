@@ -20,13 +20,13 @@
           }
 
 
-          .jaanu{
+          .topnav{
     overflow:hidden;
     background-color:rgb(119, 245, 16);
     }
 
 
-   .jaanu a{
+   .topnav a{
 background-color:rgb(233, 35, 200);
 color:rgb(20, 238, 209);
 text-decoration:none;
@@ -37,30 +37,30 @@ display:block;
 text-align:center;
 }
 
-.jaanu a:hover{
+.topnav a:hover{
 color:rgb(11, 105, 50);
-background-color:rgb(233, 127, 206)21)21)));
+background-color:rgb(233, 127, 206);
 }
 
-.jaanu .icon{
+.topnav .icon{
 display:none;
 }
 
 @media screen and (max-width:600px){
-.jaanu a:not(:first-child) {display:none;}
-.jaanu a.icon{
+.topnav a:not(:first-child) {display:none;}
+.topnav a.icon{
   float:right;
 display:block;
 }
 }
 
 @media screen and (max-width:600px){
-.jaanu.responsive  {position:relative;}
-.jaanu.responsive .icon{ position:absolute;
+.topnav.responsive  {position:relative;}
+.topnav.responsive .icon{ position:absolute;
 right:0;
 top:0;}
 
-.jaanu.responsive a{
+.topnav.responsive a{
 float:none;
 display:block;
 text-align:left;
@@ -72,21 +72,28 @@ text-align:left;
           }
     .A{
         position: absolute;
-        top: 40%;
+        top: 50%;
         left:50%;
         width: 100%;
         transform: translate(-50%,-50%);
-        font-size: 90px;
-        color: rgb(67, 25, 216);
+        font-size: 7vw;
+        color: rgb(25, 12, 71);
         text-align: center;
+        justify-content: center;
     }
-    #one{ font-size: 30px;}
-    
+    input{
+      height: 4vw;
+      width: 35vw;
+      font-size: 3vw;
+      border-radius: 1vw;
+      /* border: none; */
+      border: 5px solid rgb(94, 8, 61);
+    }       
     </style>
 </head>
 <body>
     <h1><i class="fa fa-globe" style="color:blue;"></i>&nbsp;&nbsp;Think Extra-Ordinary</h1>
-    <div class="jaanu" id="vive">
+    <div class="topnav" id="sidebar">
         <a href=""> HOME </a>
         <a href=""> images</a>
         <a href=""> Videos</a>
@@ -97,38 +104,36 @@ text-align:left;
         <i class="fa fa-bars"></i>
       </a>
     </div>
-    
-    
     <script>
     function myFunction() {
-      var x = document.getElementById("vive");
-      if (x.className === "jaanu") {
+      var x = document.getElementById("sidebar");
+      if (x.className === "topnav") {
         x.className += " responsive";
       } else {
-        x.className = "jaanu";
+        x.className = "topnav";
       }
     }
        function namefunc() {
             // var tag=document.createElement("input")
             // var atr=document.createAttribute(type="text");
-            var dummy='<input type="text" id="two" placeholder="enter your name"><span onclick="secfunc()"> click</span>'; 
+            var dummy='<input type="text" id="two" placeholder="enter your name"><br><span onclick="secfunc()"> click</span>'; 
             document.getElementById("one").innerHTML = dummy;
                
                     }
         function secfunc() {
             var dummy=document.getElementById("two").value;
-            document.getElementById("three").innerHTML="welocme to our website ";
+            document.getElementById("three").innerHTML="welocme to our website <br> ";
                 document.getElementById("three").innerHTML += dummy;
         }
   </script>
     <div class="mouni">
         <img src="html1.jpg" alt="image" width="100%">
-        <div class="A">
-            <h1 onclick="namefunc()"> What is your name </h1>
+        <div class="A">    
+            <span onclick="namefunc()"> What is your name</span><br>
             <span id="one"> </span><br>
-            <h1 id="three" ></h1>
+            <span style="color: rgb(166, 243, 11);" id="three" ></span>
         </div>
     </div> 
-
+  
 </body>
 </html>
